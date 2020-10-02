@@ -1,0 +1,12 @@
+
+<div style="width: 90%;margin-left: 5%">
+<a class="btn btn-outline-primary" [routerLink]="''">Back to list</a>
+<br>
+<br>
+<h3>Detail</h3>
+<div *ngIf="book">
+  <span class="font-weight-bold">Name: </span><span>{{book.title}}</span><br>
+  <span class="font-weight-bold">Author: </span><span>{{book.author}}</span><br>
+  <span class="font-weight-bold">Description: </span><span>{{book.description}}</span><br>
+</div>
+</div>

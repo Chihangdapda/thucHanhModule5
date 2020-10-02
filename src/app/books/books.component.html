@@ -1,0 +1,23 @@
+<div style="width: 90%;margin-left: 5%">
+  <h3>List of book </h3>
+  <a [routerLink]="'create'" style="float: right; margin-right: 3%">+Create Book</a>
+  <p>have {{books.length}} books</p>
+  <table class="table table-bordered table-hover" style="margin-top: 3%">
+    <thead>
+    <tr>
+      <td>#</td>
+      <td>Title</td>
+      <td>Author</td>
+      <td>Action</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of books; index as i">
+      <td>{{i + 1}}</td>
+      <td><a [routerLink]="'/detail/' + item.id">{{item.title}}</a></td>
+      <td>{{item.author}}</td>
+      <td><a [routerLink]="'/edit/' + item.id">edit</a> | <a [routerLink]="'/delete/' + item.id">delete</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

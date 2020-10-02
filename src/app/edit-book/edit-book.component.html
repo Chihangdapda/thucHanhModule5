@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 class="text-center">Edit Book</h2>
+    </div>
+    <form [formGroup]="bookForm">
+      <div class="panel-body" >
+        <div class="form-group">
+          <input type="text" name="id" formControlName="id" [ngModel]="book.id" hidden>
+          <div>
+            <label for="name">Name:
+              <input type="text" id="name" name="name" formControlName="title" [ngModel]="book.title"
+                     class="form-control" style="width: 1000px">
+            </label>
+          </div>
+          <div>
+            <label for="author">Author:
+              <input type="text" id="author" name="author" formControlName="author" [ngModel]="book.author"
+                     class="form-control" style="width: 1000px">
+            </label>
+          </div>
+          <div>
+            <label for="description">Description:
+              <textarea type="text" id="description" name="description" formControlName="description" rows="5"
+                        [ngModel]="book.description" class="form-control" style="width: 1000px"></textarea>
+            </label>
+          </div>
+          <div>
+            <input class="btn btn-outline-primary" type="submit" value="Save" (click)="editBook()">
+            <a class="btn btn-outline-primary" [routerLink]="''" style="margin-left: 2%">Back</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
